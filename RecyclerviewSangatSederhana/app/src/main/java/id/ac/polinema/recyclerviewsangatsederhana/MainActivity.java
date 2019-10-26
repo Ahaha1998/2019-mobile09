@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
         listSuperHero.add(hero);
         DummyHeroAdapter dummyHeroAdapter = new DummyHeroAdapter(listSuperHero);
         rvSuperHero.setAdapter(dummyHeroAdapter);
-        rvSuperHero.setLayoutManager(new LinearLayoutManager(this));
+        rvSuperHero.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
     }
 }
